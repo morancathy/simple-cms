@@ -3,13 +3,14 @@ class DemoController < ApplicationController #DemoController inherits from Appli
   layout false  #turns layout off
   def index  #method aka action, renders a view and default view layout
             #default tells it to go to index
-    render('hello')  #tyhis is default action. This sets the template. Don't need to do this
+    render('index')  #tyhis is default action. This sets the template. Don't need to do this
                       #remember, it is not calling this actiion, just setting template.
                       # render usually used with if/else
   end
 
   def hello
-    render('index')  #this is default action. This sets the tempate.
+    @array = [1,2,3,4,5]
+    render('hello')  #this is default action. This sets the tempate.
   end 
 
   def hello_other
