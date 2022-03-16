@@ -1,1 +1,20 @@
 <h1>Hello Cathy from hello</h1>
+
+<%= 1 + 1 %> <br/>
+<% target = "world"%>
+<%= "Hello #{target}"%>
+<br/>
+<%# the below renders 3, just once. But in console it does 0, 1, 2 
+it's like console.log. 
+The output is 3, so that is what is outputted
+%>
+<%=
+3.times do |n|
+    puts n
+end 
+%>
+<br/>
+<%# this is how to make 0 1 2 3 work %>
+<% 3.times do |n| %>
+  <%= n %> <br/>
+<% end %>
