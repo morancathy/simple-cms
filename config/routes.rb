@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   #simple route example
   get 'demo/index'
   get 'demo/hello'
+  get 'demo/hello_other'
+  get 'demo/whitesox'
 
   
   #default route example (may go away in future versions of rails)
