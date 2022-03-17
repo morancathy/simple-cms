@@ -10,6 +10,8 @@ class DemoController < ApplicationController #DemoController inherits from Appli
 
   def hello
     @array = [1,2,3,4,5]
+    @id = params['id']   #strings and symbols both work
+    @page = params[:page]
     render('hello')  #this is default action. This sets the tempate.
   end 
 
