@@ -1,0 +1,2 @@
+class AddIndex < ApplicationRecord
+end

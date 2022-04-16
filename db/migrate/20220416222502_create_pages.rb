@@ -9,5 +9,8 @@ class CreatePages < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    # add_index("pages", "subject_id")  #did this in seperate migreation, could have done this here
+    # add_index("pages", "permalink")
   end
 end
