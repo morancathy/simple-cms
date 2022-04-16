@@ -1,6 +1,17 @@
 <h1>Hello Cathy from index</h1>
 
 <a href="/demo/hello">Hello page 1</a><br/>
-<%= link_to('Hello page 2', {:action => 'hello'})%> <br/>
-<%= link_to('Hello with parameteres', {:action => 'hello', :page => 5, :id =>  20})%> <br/>
+<%= link_to('Hello page 2', {:action => 'hello'})%> <br/>   <%# does exact thing as line 3 %>
+
+<%= link_to('Hello with parameteres', {:action => 'hello', :page => 5, :id =>  20})%> <br/>  
+
+<%# I added params to my hash, so when clicked on link, went to routes file to find matching route. Anything not explictilty declared in
+that route got added as a query param in our URL string. demo conroller has access to those values as params. Assigned to instance variable, which is avaiable to our template. i was then able to use in hello.html.erb
+Can also use params fro controller to talk to database, ask to show us data whose id matches 
+Now we can pass data from page to page%>
+
+<%# if want id to be at end of url, must change in routes.rb
+get ':controller(/:action(:id))'... but this didnt work april 16 %>
+
+
 <%# <%= route will be demo/index. Can see this in config/routes %>
