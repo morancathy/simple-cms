@@ -4,6 +4,11 @@ Rails.application.routes.draw do
                   #This is telling it which controller and which action
   root 'demo#index'
 
+  resource :users
+  post "/login",  to: "users#login"
+  # get "/users", to: "users#index"
+  # get "/users/:id", to: "users#show"
+
   #simple route example
   get 'demo/index'
   get 'demo/hello'
