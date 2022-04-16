@@ -31,3 +31,5 @@ end
 # route will be demo/index. Can see this in config/routes
 # Dont need to, but good practice to have action defined for each tempalte. 
 #reminds us its a possible choice server can make w/out serving an error
+
+#params are ALWAYS STRINGS
