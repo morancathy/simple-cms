@@ -12,6 +12,9 @@ class DemoController < ApplicationController #DemoController inherits from Appli
     @array = [1,2,3,4,5]
     @id = params['id']   #strings and symbols both work
     @page = params[:page]
+    # instance varilables above accessible in views.  I got the value of these instance variables 
+
+
     render('hello')  #this is default action. This sets the tempate.
   end 
 
