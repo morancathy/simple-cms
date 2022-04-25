@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_16_224613) do
+ActiveRecord::Schema.define(version: 2022_04_25_124618) do
 
   create_table "add_indices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 2022_04_16_224613) do
     t.string "string", limit: 50
     t.string "email", limit: 100, default: "", null: false
     t.string "username", limit: 25
-    t.string "hashed_password", limit: 40
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
     t.index ["username"], name: "index_admin_users_on_username"
   end
 
