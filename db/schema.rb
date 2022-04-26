@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_25_124618) do
+ActiveRecord::Schema.define(version: 2022_04_26_125447) do
 
   create_table "add_indices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -27,6 +27,12 @@ ActiveRecord::Schema.define(version: 2022_04_25_124618) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.index ["username"], name: "index_admin_users_on_username"
+  end
+
+  create_table "admin_users_pages", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "admin_user_id"
+    t.integer "page_id"
+    t.index ["admin_user_id", "page_id"], name: "index_admin_users_pages_on_admin_user_id_and_page_id"
   end
 
   create_table "pages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
