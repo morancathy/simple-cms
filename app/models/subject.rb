@@ -1,6 +1,6 @@
 class Subject < ApplicationRecord
 
-  has_one :page  #this means Subject has one page
+  has_many :pages  #this means Subject has many pages
 
   scope :visible, lambda {where(:visible => true)}
   scope :invisible, lambda {where(:visible => false)}
